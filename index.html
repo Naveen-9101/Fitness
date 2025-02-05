@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fitness</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Fitness Tracker</h1>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Pick Your Calculator</h2>
+
+      <section class="tabs">
+        <button id="bmi" class="active" onclick="handleTab(event)">BMI</button>
+        <button id="water" onclick="handleTab(event)">Water In Take</button>
+
+
+        <button  id="step" onclick="handleTab(event)">Steps</button>
+      </section>
+
+      <section class="calculator">
+        <div for="bmi" class="tab-content active">
+          <p>Body Mass Index (BMI)is a tool used to assess a person's body weight in relation to their height and categorize their health status. It helps identify if someone is underweight, at a healthy weight or obese.</p>
+        
+
+          <form>
+            <label for="height">Height (cm)</label>
+            <input type="number" name="height">
+
+            <label for="weight">Weight (kg)</label>
+            <input type="number" name="weight">
+
+            <button type="button" onclick="handleBmi()">Calculate</button>
+          </form>
+          <div class="result">
+            <div class="init">
+              <small>A BMI result an individual's overall weight status and potential health risks.</small>
+            </div>
+            <div class="final">
+              <p> Your BMI:</p>
+              <h3 id="result-bmi"></h3>
+              <p> Your Categorization:</p>
+              <h3 id="result-bmi-category"></h3>
+            </div>
+          </div>
+      </div>
+
+
+        <div for="water" class="tab-content ">
+          <p>Water intake is essential for maintaining hydration, supporting bodily functions, and regulating body temperature.It plays a vital role in overall health and energy levels. </p>
+        
+
+          <form>
+            <label for="weight">Weight (kg)</label>
+            <input type="number" name="weight">
+
+            <label for="activity">Activity Level (hours per day)</label>
+            <input type="number" name="activity">
+
+            <button type="button" onclick="handleWater()">Calculate</button>
+          </form>
+          <div class="result">
+            <div class="init">
+              <small>A Water intake result shows if a person is meeting their daily hydration needs.</small>
+            </div>
+            <div class="final">
+              <p>Liters of water recommended per day</p>
+              <h3 id="result-water"></h3>
+            </div>  
+          </div>
+        </div>
+        <div for="step" class="tab-content">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, illo?</p>
+          <h1>Step Count</h1>
+          <p>Steps:<span id="stepcount">0</span></p>
+
+          <button onclick="reset()">Reset</button>
+          <p id="status"></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="index.js"></script>
+  
+</body>
+</html>
